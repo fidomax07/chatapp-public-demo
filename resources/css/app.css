@@ -1,0 +1,85 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a202c;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.pin-reset-card {
+    background-color: #2d3748;
+}
+
+.pin-reset-success {
+    text-align: center;
+}
+
+.pin-reset-checkmark {
+    fill: seagreen;
+}
+
+.input-group-text {
+    color: #2d3748;
+}
+
+.form-control:focus {
+    border-color: #2d3748;
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+.btn-dark {
+    background-color: #1a202c;
+    border-color: #1a202c;
+}
+
+#cover-spin {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /*background-color: rgba(255, 255, 255, 0.7);*/
+    background-color: rgba(26, 32, 44, 0.6);
+    /*background-color: rgba(45, 55, 72, 0.3);*/
+    z-index: 9999;
+    display: block;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#cover-spin::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.9);
+    border-top-color: transparent;
+    border-width: 4px;
+    border-radius: 50%;
+    -webkit-animation: spin .8s linear infinite;
+    animation: spin .8s linear infinite;
+}
